@@ -106,11 +106,27 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cliente\CrudClientes.aspx" />
+    <Content Include="Cliente\RegistrarCliente.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente\CrudClientes.aspx.cs">
+      <DependentUpon>CrudClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\CrudClientes.aspx.designer.cs">
+      <DependentUpon>CrudClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\RegistrarCliente.aspx.cs">
+      <DependentUpon>RegistrarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\RegistrarCliente.aspx.designer.cs">
+      <DependentUpon>RegistrarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
