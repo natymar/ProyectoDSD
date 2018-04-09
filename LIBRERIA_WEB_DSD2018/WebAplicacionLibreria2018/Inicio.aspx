@@ -16,12 +16,6 @@
 		
 		<form id="Form1" class="form" runat="server">
 			    
-
-
-
-
-
-
     <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
 
 
@@ -33,11 +27,6 @@
 
     <asp:Button ID="btnNuevo" runat="server" onclick="btnNuevo_Click" 
         Text="Entrar" />
-
-
-
-
-
 
 		</form>
 	</div>
@@ -61,8 +50,5 @@
 
         <script src="js/index.js"></script>
 
-    
-    
-    
   </body>
 </html>
