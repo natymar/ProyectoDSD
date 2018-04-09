@@ -40,7 +40,6 @@ namespace WScliente.Persistencia
                 return ClienteEncontrado;
             }
         }//obtener Cliente
-         //
 
         public List<cliente> ListarAllClientes()
         {
