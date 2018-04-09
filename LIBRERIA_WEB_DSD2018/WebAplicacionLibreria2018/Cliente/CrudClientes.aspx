@@ -23,13 +23,13 @@
                         <td>
                             <asp:TextBox ID="txtFiltro" runat="server"></asp:TextBox></td>
                         <td>
-                            <asp:Button ID="btnBuscar" runat="server" Text="Button" /></td>
+                            <asp:Button ID="btnBuscar" runat="server" Text="Button" OnClick="btnBuscar_Click" /></td>
                         
                     </tr>
                 </table>
                 
             </div>
-            <span class="tituloGrid">Lista de Clientes</span>
+            <span class="tituloGrid">Lista de Clientes</span><br/>
             <div id="main">
                 <asp:GridView ID="gridClientes" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -37,11 +37,10 @@
                     <EmptyDataTemplate>
                         <div class="linkCrearCliente">
                             <span class="texto">
+                                <br />
                                 El cliente, no Existe :::::
                             </span><br>
-                            <asp:LinkButton ID="linkCrear" Text="Registrar Cliente" runat="server">LinkButton
-
-                            </asp:LinkButton>
+                            <asp:LinkButton ID="linkCrear" Text="Registrar Cliente" runat="server" PostBackUrl="~/Cliente/RegistrarCliente.aspx"></asp:LinkButton>
                         </div>
                     </EmptyDataTemplate>
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -56,6 +55,13 @@
                 </asp:GridView>
                     
             </div>
+    <section>
+        <div class="">
+
+            <asp:Button ID="btnRegistrar" runat="server" Text="Agregar Cliente" PostBackUrl="~/Cliente/RegistrarCliente.aspx" />
+
+        </div>
+    </section>
         </form>
     <footer>
         <span class="pie">
