@@ -105,10 +105,7 @@ namespace WScliente.Persistencia
             }//sqlconecction
             return ListaClientes;
         }//buscarCliente
-
-
-
-
+        
         //public List<Cliente> CrearCliente(Cliente c)
         public void CrearCliente(cliente c)
         {
@@ -133,3 +130,5 @@ namespace WScliente.Persistencia
         }
     }
 }
+
+//prueba
