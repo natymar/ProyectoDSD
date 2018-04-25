@@ -10,9 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAplicacionLibreria2018",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WScliente", "WScliente\WScliente.csproj", "{2CFB624E-7186-464F-994B-68080FA8819F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioProductos", "..\..\..\..\Downloads\TiendaWeb\ServicioProductos\ServicioProductos.csproj", "{E4A6BDE7-2250-4199-A964-2D7321B9103A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioCompras", "..\..\..\..\Downloads\TiendaWeb\ServicioCompras\ServicioCompras.csproj", "{9279E11B-BD18-48B9-87A2-4FD9BC09BD7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioProductos", "ServicioProductos\ServicioProductos.csproj", "{E4A6BDE7-2250-4199-A964-2D7321B9103A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,14 +44,6 @@ Global
 		{E4A6BDE7-2250-4199-A964-2D7321B9103A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E4A6BDE7-2250-4199-A964-2D7321B9103A}.Release|x86.ActiveCfg = Release|Any CPU
 		{E4A6BDE7-2250-4199-A964-2D7321B9103A}.Release|x86.Build.0 = Release|Any CPU
-		{9279E11B-BD18-48B9-87A2-4FD9BC09BD7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9279E11B-BD18-48B9-87A2-4FD9BC09BD7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9279E11B-BD18-48B9-87A2-4FD9BC09BD7E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9279E11B-BD18-48B9-87A2-4FD9BC09BD7E}.Debug|x86.Build.0 = Debug|Any CPU
-		{9279E11B-BD18-48B9-87A2-4FD9BC09BD7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9279E11B-BD18-48B9-87A2-4FD9BC09BD7E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9279E11B-BD18-48B9-87A2-4FD9BC09BD7E}.Release|x86.ActiveCfg = Release|Any CPU
-		{9279E11B-BD18-48B9-87A2-4FD9BC09BD7E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
