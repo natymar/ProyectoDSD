@@ -7,6 +7,7 @@ using System.ServiceModel;
 using System.Text;
 using ServicioProductos.Dominio;
 using ServicioProductos.Errores;
+using ServicioProductos.Persistencia;
 
 namespace ServicioProductos
 {
