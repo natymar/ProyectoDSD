@@ -24,5 +24,8 @@ namespace WScliente.Dominio
         public string correo    {set;get;}
         [DataMember]
         public string estado    { set; get; }
+
+        [DataMember]
+        public string estatus { set; get; }
     }
 }
