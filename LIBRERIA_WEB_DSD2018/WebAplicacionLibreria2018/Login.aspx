@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="WebApplication1.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebAplicacionLibreria2018.Login" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!DOCTYPE html><html >
@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style.css">    
   </head>
 
-  <body background="fondo3.jpg" style="background-repeat: no-repeat;">
+  <body background="fondo.jpg" style="background-repeat: no-repeat;">
 
     <div class="wrapper">
 	<div class="container">
@@ -16,9 +16,18 @@
 		
 		<form id="Form1" class="form" runat="server">
 			    
-    <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
 
 
+
+
+<div>
+
+    
+     <asp:Label  runat="server"> Usuario:</asp:Label> <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
+</div>
+
+
+    <asp:Label  runat="server"> Clave:</asp:Label>
     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
 
 
@@ -27,6 +36,11 @@
 
     <asp:Button ID="btnNuevo" runat="server" onclick="btnNuevo_Click" 
         Text="Entrar" />
+
+
+
+
+
 
 		</form>
 	</div>
@@ -50,5 +64,8 @@
 
         <script src="js/index.js"></script>
 
+    
+    
+    
   </body>
 </html>

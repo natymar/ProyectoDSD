@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1 {
+namespace WebAplicacionLibreria2018 {
     
     
-    public partial class WebForm1 {
+    public partial class Login {
         
         /// <summary>
         /// Control Form1.
