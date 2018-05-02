@@ -10,12 +10,12 @@ namespace WCFServiceUsuario.Persistencia
     public class UsuarioDAO
     {
 
-        private string cadenaConexion = "Data Source=localhost\\SQLEXPRESS; Initial Catalog=ventas;Integrated Security=SSPI";
+        private string cadenaConexion = "Data Source=localhost\\SQLEXPRESS; Initial Catalog=TiendaWeb;Integrated Security=SSPI";
         //Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
         public Usuario crear(Usuario usuarioACrear)
         {
             Usuario usuarioCreado = null;
-            string sql = "INSERT INTO t_usuario VALUES (@codigoUsuario, @nombreUsuario, @apePaternoUsuario, @apeMaternoUsuario, @claveUsuario)";//añadi parentesis xd
+            string sql = "INSERT INTO usuarios VALUES (@codigoUsuario, @nombreUsuario, @apePaternoUsuario, @apeMaternoUsuario, @claveUsuario)";
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
@@ -28,6 +28,7 @@ namespace WCFServiceUsuario.Persistencia
                     comando.Parameters.Add(new SqlParameter("@apePaternoUsuario", usuarioACrear.apePaternoUsuario));
                     comando.Parameters.Add(new SqlParameter("@apeMaternoUsuario", usuarioACrear.apeMaternoUsuario));
                     comando.Parameters.Add(new SqlParameter("@claveUsuario", usuarioACrear.claveUsuario));
+                    comando.Parameters.Add(new SqlParameter("@nivelAcceso", usuarioACrear.nivelAcceso));
                     comando.ExecuteNonQuery();
                 }
 
@@ -40,7 +41,7 @@ namespace WCFServiceUsuario.Persistencia
         public Usuario obtener(int codigo)
         {
             Usuario usuarioEncontrado = null;
-            string sql = "SELECT * FROM t_usuario where codigoUsuario = @codigoUsuario";
+            string sql = "SELECT * FROM usuarios where codigoUsuario = @codigoUsuario";
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 conexion.Open();
@@ -95,7 +96,7 @@ namespace WCFServiceUsuario.Persistencia
 
         public void eliminar(int codigo)
         {
-            string sql = "DELETE FROM t_usuario WHERE  codigoUsuario = @codigoUsuario";
+            string sql = "DELETE FROM usuarios WHERE  codigoUsuario = @codigoUsuario";
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 conexion.Open();
@@ -116,7 +117,7 @@ namespace WCFServiceUsuario.Persistencia
 
 
             Usuario usuarioEncontrado = null;
-            string sql = "SELECT * FROM t_usuario";
+            string sql = "SELECT * FROM usuarios";
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 conexion.Open();
@@ -153,7 +154,7 @@ namespace WCFServiceUsuario.Persistencia
         public int VerificarUsuario(string usuario, string clave)
         {
             int retorno=0;
-            string sql = "SELECT * FROM t_usuario where codigoUsuario = @codigoUsuario and claveUsuario= @claveUsuario";
+            string sql = "SELECT * FROM usuarios where codigoUsuario = @codigoUsuario and claveUsuario= @claveUsuario";
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {

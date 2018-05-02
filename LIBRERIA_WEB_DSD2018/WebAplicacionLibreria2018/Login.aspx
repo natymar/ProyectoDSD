@@ -4,7 +4,7 @@
 <!DOCTYPE html><html >
   <head>
     <meta charset="UTF-8">
-    <title>Login Intranet</title>    
+    <title>Login</title>    
         <link rel="stylesheet" href="style.css">    
   </head>
 
@@ -22,12 +22,9 @@
 
 <div>
 
-    
-     <asp:Label  runat="server"> Usuario:</asp:Label> <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
+     <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
 </div>
 
-
-    <asp:Label  runat="server"> Clave:</asp:Label>
     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
 
 

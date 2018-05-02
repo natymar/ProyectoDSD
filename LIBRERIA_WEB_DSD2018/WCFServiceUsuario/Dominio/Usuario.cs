@@ -30,5 +30,8 @@ namespace WCFServiceUsuario.Dominio
         public string estadoUsuario { get; set; }
 
 
+        [DataMember]
+        public string nivelAcceso { get; set; }
+
     }
 }
