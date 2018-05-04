@@ -7,37 +7,35 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <h2>Solicitar Pedido</h2>
-            <tr></tr>            
-            <tr>
-                <td>Nombre:</td>
-                <td>
-                    <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
-                </td>             
-            </tr>                        
-            <tr>
-                <td>Apellido:</td>
-                <td>
-                    <asp:TextBox ID="txtApellido" runat="server"></asp:TextBox>
-                </td>             
-            </tr>            
-            <tr>
-                <td>Correo:</td>
-                <td>
-                    <asp:TextBox ID="txtCorreo" runat="server"></asp:TextBox>
-                </td>             
-            </tr>
-            <tr>
-                <td>Adjuntar Lista:</td>
-                <td>
-                    <asp:TextBox ID="txtRutaArchivo" runat="server"></asp:TextBox>
-                </td>             
-            </tr>
-        </div>
+<body style="height: 393px; width: 606px;">
+    <form id="form1" runat="server">  
+        <br />
+        <asp:Label ID="lbl_dni" runat="server" Text="DNI:"></asp:Label>
+        <br />
+        <br />
+        <asp:TextBox ID="txt_dni" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Label ID="lbl_nomape" runat="server" Text="Nombres y Apellidos:"></asp:Label>
+        <br />
+        <br />
+        <asp:TextBox ID="txt_nomape" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Label ID="lbl_correo" runat="server" Text="Correo:"></asp:Label>
+        <br />
+        <br />
+        <asp:TextBox ID="txt_correo" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Label ID="lbl_archivo" runat="server" Text="Lista para cotizar:"></asp:Label>
+        <br />
+        <br />
+        <asp:FileUpload ID="FileUpload1" runat="server" />
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="btn_enviar" runat="server" Text="ENVIAR"/>
     </form>
-
 </body>
 </html>
