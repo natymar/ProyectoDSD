@@ -11,7 +11,7 @@ namespace WScliente.Persistencia
     public class ClienteDAO
     {
         public cliente ObtenerCliente(int idcliente)
-        {//ObtenerFactura
+        {//ObtenerCliente
             cliente ClienteEncontrado = null;
             using (SqlConnection cn = new SqlConnection(ConexionDAO.getConexion()))
             {
@@ -19,7 +19,7 @@ namespace WScliente.Persistencia
                 using (SqlCommand cmd = new SqlCommand("ObtenerCliente", cn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@idCliente", idcliente));
+                    cmd.Parameters.Add(new SqlParameter("@id", idcliente));
                     using (SqlDataReader resultado = cmd.ExecuteReader())
                     {
                         if (resultado.Read())
@@ -128,6 +128,43 @@ namespace WScliente.Persistencia
             //nuevoCliente = BuscarCliente(Convert.ToString(c.idCliente));
             //return nuevoCliente;
         }
+        //
+
+        public void ModificarCliente(cliente c)
+        {
+            //List<Cliente> nuevoCliente = null;
+            using (SqlConnection cn = new SqlConnection(ConexionDAO.getConexion()))
+            {
+                cn.Open();
+                using (SqlCommand cmd = new SqlCommand("ModificarCliente", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@nombre", c.nombre));
+                    cmd.Parameters.Add(new SqlParameter("@apePater", c.apePater));
+                    cmd.Parameters.Add(new SqlParameter("@apeMater", c.apeMater));
+                    cmd.Parameters.Add(new SqlParameter("@dni", c.dni));
+                    cmd.Parameters.Add(new SqlParameter("@correo", c.correo));
+                    cmd.Parameters.Add(new SqlParameter("@idCliente", c.idCliente));
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            
+            
+        }
+
+        public void EliminarCliente(int idcliente)
+        {
+            using (SqlConnection cn = new SqlConnection(ConexionDAO.getConexion()))
+            {
+                cn.Open();
+                using (SqlCommand cmd = new SqlCommand("EliminarCliente", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@idcliente", idcliente));
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }//EliminarCliente
     }
 }
 

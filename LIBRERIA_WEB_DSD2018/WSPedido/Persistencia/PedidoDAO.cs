@@ -34,7 +34,8 @@ namespace WSPedido.Persistencia
         public List<Pedido> Listar()
         {
             List<Pedido> pedidosEncontrados = new List<Pedido>();
-            Ped
+            //Ped
+            return null;
         }
     }
 }

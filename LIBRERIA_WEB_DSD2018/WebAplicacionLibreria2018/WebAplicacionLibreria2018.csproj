@@ -185,6 +185,33 @@
     <Content Include="assets\lineicons\lte-ie7.js" />
     <Content Include="assets\lineicons\style.css" />
     <Content Include="fondo.jpg" />
+    <None Include="Service References\ServiceReference2\ClientService.wsdl" />
+    <None Include="Service References\ServiceReference2\ClientService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference2\ClientService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference2\ClientService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference2\ClientService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceWScliente\ClientService.disco" />
+    <None Include="Service References\ServiceReferenceWScliente\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceWScliente\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferenceWScliente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference2\ClientService.disco" />
+    <None Include="Service References\ServiceReference2\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference2\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="style.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
@@ -242,7 +269,17 @@
     <Content Include="assets\lineicons\fonts\linecons.eot" />
     <Content Include="assets\lineicons\fonts\linecons.ttf" />
     <Content Include="assets\lineicons\fonts\linecons.woff" />
-    <None Include="Service References\ServiceReferenceCliente\ClientService.xsd">
+    <None Include="Service References\ServiceReferenceWScliente\ClientService.wsdl" />
+    <None Include="Service References\ServiceReferenceWScliente\ClientService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceWScliente\ClientService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceWScliente\ClientService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceWScliente\ClientService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
@@ -268,41 +305,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Properties\DataSources\WScliente.Dominio.cliente.datasource" />
-    <None Include="Service References\proxyConsumidor\ClientService.wsdl" />
-    <None Include="Service References\proxyConsumidor\ClientService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\proxyConsumidor\ClientService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\proxyConsumidor\ClientService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReferenceCliente\ClientService.disco" />
-    <None Include="Service References\ServiceReferenceCliente\configuration91.svcinfo" />
-    <None Include="Service References\ServiceReferenceCliente\configuration.svcinfo" />
-    <None Include="Service References\ServiceReferenceCliente\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\proxyConsumidor\ClientService.disco" />
-    <None Include="Service References\proxyConsumidor\configuration91.svcinfo" />
-    <None Include="Service References\proxyConsumidor\configuration.svcinfo" />
-    <None Include="Service References\proxyConsumidor\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="Web.config" />
-    <None Include="Service References\ServiceReferenceCliente\ClientService.wsdl" />
-    <None Include="Service References\ServiceReferenceCliente\ClientService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReferenceCliente\ClientService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Service References\ServiceReferenceCliente\WebAplicacionLibreria2018.ServiceReferenceCliente.Cliente.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente\CrudClientes.aspx.cs">
@@ -318,6 +321,16 @@
     </Compile>
     <Compile Include="Cliente\RegistrarCliente.aspx.designer.cs">
       <DependentUpon>RegistrarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReferenceWScliente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Usuario\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -341,16 +354,6 @@
       <DependentUpon>SolicitudCotizacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\proxyConsumidor\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\ServiceReferenceCliente\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -367,19 +370,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\proxyConsumidor\" />
-    <WCFMetadataStorage Include="Service References\ServiceReferenceCliente\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\WScliente\WScliente.csproj">
       <Project>{2CFB624E-7186-464F-994B-68080FA8819F}</Project>
       <Name>WScliente</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference2\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferenceWScliente\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebAplicacionLibreria2018.proxyConsumidor {
+namespace WebAplicacionLibreria2018.ServiceReferenceWScliente {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="proxyConsumidor.IClientService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferenceWScliente.IClientService")]
     public interface IClientService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/ObtenerCliente", ReplyAction="http://tempuri.org/IClientService/ObtenerClienteResponse")]
@@ -28,25 +28,39 @@ namespace WebAplicacionLibreria2018.proxyConsumidor {
         System.Threading.Tasks.Task<WScliente.Dominio.cliente[]> ListarAllClientesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/BuscarCliente", ReplyAction="http://tempuri.org/IClientService/BuscarClienteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WScliente.Errores.DuplicadoException), Action="http://tempuri.org/IClientService/BuscarClienteDuplicadoExceptionFault", Name="DuplicadoException", Namespace="http://schemas.datacontract.org/2004/07/WScliente.Errores")]
         WScliente.Dominio.cliente[] BuscarCliente(string filtro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/BuscarCliente", ReplyAction="http://tempuri.org/IClientService/BuscarClienteResponse")]
         System.Threading.Tasks.Task<WScliente.Dominio.cliente[]> BuscarClienteAsync(string filtro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/CrearCliente", ReplyAction="http://tempuri.org/IClientService/CrearClienteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WScliente.Errores.DuplicadoException), Action="http://tempuri.org/IClientService/CrearClienteDuplicadoExceptionFault", Name="DuplicadoException", Namespace="http://schemas.datacontract.org/2004/07/WScliente.Errores")]
         void CrearCliente(WScliente.Dominio.cliente c);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/CrearCliente", ReplyAction="http://tempuri.org/IClientService/CrearClienteResponse")]
         System.Threading.Tasks.Task CrearClienteAsync(WScliente.Dominio.cliente c);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/ModificarCliente", ReplyAction="http://tempuri.org/IClientService/ModificarClienteResponse")]
+        void ModificarCliente(WScliente.Dominio.cliente c);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/ModificarCliente", ReplyAction="http://tempuri.org/IClientService/ModificarClienteResponse")]
+        System.Threading.Tasks.Task ModificarClienteAsync(WScliente.Dominio.cliente c);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/EliminarCliente", ReplyAction="http://tempuri.org/IClientService/EliminarClienteResponse")]
+        void EliminarCliente(int idcliente);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/EliminarCliente", ReplyAction="http://tempuri.org/IClientService/EliminarClienteResponse")]
+        System.Threading.Tasks.Task EliminarClienteAsync(int idcliente);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IClientServiceChannel : WebAplicacionLibreria2018.proxyConsumidor.IClientService, System.ServiceModel.IClientChannel {
+    public interface IClientServiceChannel : WebAplicacionLibreria2018.ServiceReferenceWScliente.IClientService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ClientServiceClient : System.ServiceModel.ClientBase<WebAplicacionLibreria2018.proxyConsumidor.IClientService>, WebAplicacionLibreria2018.proxyConsumidor.IClientService {
+    public partial class ClientServiceClient : System.ServiceModel.ClientBase<WebAplicacionLibreria2018.ServiceReferenceWScliente.IClientService>, WebAplicacionLibreria2018.ServiceReferenceWScliente.IClientService {
         
         public ClientServiceClient() {
         }
@@ -97,6 +111,22 @@ namespace WebAplicacionLibreria2018.proxyConsumidor {
         
         public System.Threading.Tasks.Task CrearClienteAsync(WScliente.Dominio.cliente c) {
             return base.Channel.CrearClienteAsync(c);
+        }
+        
+        public void ModificarCliente(WScliente.Dominio.cliente c) {
+            base.Channel.ModificarCliente(c);
+        }
+        
+        public System.Threading.Tasks.Task ModificarClienteAsync(WScliente.Dominio.cliente c) {
+            return base.Channel.ModificarClienteAsync(c);
+        }
+        
+        public void EliminarCliente(int idcliente) {
+            base.Channel.EliminarCliente(idcliente);
+        }
+        
+        public System.Threading.Tasks.Task EliminarClienteAsync(int idcliente) {
+            return base.Channel.EliminarClienteAsync(idcliente);
         }
     }
 }

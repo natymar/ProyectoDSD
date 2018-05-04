@@ -23,8 +23,20 @@ namespace WScliente
         [FaultContract(typeof(DuplicadoException))]
         [OperationContract]
         List<cliente> BuscarCliente(string filtro);
+
+        //agregamos una exception para un cliente duplicado
+        [FaultContract(typeof(DuplicadoException))]
         [OperationContract]
         void CrearCliente(cliente c);
+
+        [OperationContract]
+        void ModificarCliente(cliente c);
+
+        //[FaultContract(typeof(DuplicadoException))]
+        
+        [OperationContract]
+        void EliminarCliente(int idcliente);
+
 
     }
 }

@@ -25,7 +25,7 @@ namespace WScliente.Dominio
         [DataMember]
         public string estado    { set; get; }
 
-        [DataMember]
-        public string estatus { set; get; }
+        //[DataMember]
+        //public string estatus { set; get; }
     }
 }

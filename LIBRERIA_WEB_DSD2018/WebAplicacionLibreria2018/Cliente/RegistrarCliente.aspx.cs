@@ -11,31 +11,34 @@ namespace WebAplicacionLibreria2018.Cliente
 {
     public partial class RegistrarCliente : System.Web.UI.Page
     {
-        proxyConsumidor.ClientServiceClient proxy = new proxyConsumidor.ClientServiceClient();
+        ServiceReferenceWScliente.ClientServiceClient proxy = new ServiceReferenceWScliente.ClientServiceClient();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             //comentario de prueba commit a
+            
         }
         
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            cliente cli = new cliente();
-            cli.idCliente = int.Parse(txtCodigo.Text);
-            cli.nombre = txtNombre.Text;
-            cli.apePater = txtPaterno.Text;
-            cli.apeMater = txtMaterno.Text;
-            cli.dni = int.Parse(txtDni.Text);
-            cli.correo = txtCorreo.Text;
+            
+                      
             try
             {
+                cliente cli = new cliente();
+                cli.idCliente = int.Parse(txtCodigo.Text);
+                cli.nombre = txtNombre.Text;
+                cli.apePater = txtPaterno.Text;
+                cli.apeMater = txtMaterno.Text;
+                cli.dni = int.Parse(txtDni.Text);
+                cli.correo = txtCorreo.Text;
                 proxy.CrearCliente(cli);
                 Response.Redirect("CrudClientes.aspx");
             }
             catch (Exception)
             {
-
-                DuplicadoException error = new DuplicadoException();
-                mensaje(error.getMensaje());
+                
+               
             }
             
 

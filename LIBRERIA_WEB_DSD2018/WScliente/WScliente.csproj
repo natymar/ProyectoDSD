@@ -100,7 +100,6 @@
     </Compile>
     <Compile Include="Dominio\Cliente.cs" />
     <Compile Include="Dominio\Conexion.cs" />
-    <Compile Include="Dominio\prueba.cs" />
     <Compile Include="Errores\DuplicadoException.cs" />
     <Compile Include="IClientService.cs" />
     <Compile Include="Persistencia\ClienteDAO.cs" />

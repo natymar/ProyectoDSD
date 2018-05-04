@@ -14,9 +14,6 @@ namespace WScliente.Errores
         [DataMember]
         public string descripcionError { set; get; }
        
-        public string getMensaje()
-        {
-            return "Codigo : " + codigoError + "<br>Descripcion :" + descripcionError;
-        }
+        
     }
 }

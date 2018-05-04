@@ -16,7 +16,7 @@ namespace WCFServiceUsuario
         [FaultContract(typeof(UsuarioException))]
         [OperationContract]
         Usuario CrearUsuario(Usuario usuarioACrear);
-
+        
 
         [OperationContract]
         Usuario ObtenerUsuario(int codigo);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WScliente.Dominio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WScliente.Dominio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="Cliente">
+  <xs:complexType name="cliente">
     <xs:sequence>
       <xs:element minOccurs="0" name="apeMater" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="apePater" nillable="true" type="xs:string" />
@@ -11,11 +11,11 @@
       <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Cliente" nillable="true" type="tns:Cliente" />
-  <xs:complexType name="ArrayOfCliente">
+  <xs:element name="cliente" nillable="true" type="tns:cliente" />
+  <xs:complexType name="ArrayOfcliente">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cliente" nillable="true" type="tns:Cliente" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cliente" nillable="true" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfCliente" nillable="true" type="tns:ArrayOfCliente" />
+  <xs:element name="ArrayOfcliente" nillable="true" type="tns:ArrayOfcliente" />
 </xs:schema>

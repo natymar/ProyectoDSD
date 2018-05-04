@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:52577/ClientService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:52577/ClientService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:52577/ClientService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WScliente.Dominio" />
+      <xsd:import schemaLocation="http://localhost:52577/ClientService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WScliente.Errores" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IClientService_ObtenerCliente_InputMessage">
@@ -25,11 +26,29 @@
   <wsdl:message name="IClientService_BuscarCliente_OutputMessage">
     <wsdl:part name="parameters" element="tns:BuscarClienteResponse" />
   </wsdl:message>
+  <wsdl:message name="IClientService_BuscarCliente_DuplicadoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WScliente.Errores" name="detail" element="q1:DuplicadoException" />
+  </wsdl:message>
   <wsdl:message name="IClientService_CrearCliente_InputMessage">
     <wsdl:part name="parameters" element="tns:CrearCliente" />
   </wsdl:message>
   <wsdl:message name="IClientService_CrearCliente_OutputMessage">
     <wsdl:part name="parameters" element="tns:CrearClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClientService_CrearCliente_DuplicadoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WScliente.Errores" name="detail" element="q2:DuplicadoException" />
+  </wsdl:message>
+  <wsdl:message name="IClientService_ModificarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IClientService_ModificarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClientService_EliminarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IClientService_EliminarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarClienteResponse" />
   </wsdl:message>
   <wsdl:portType name="IClientService">
     <wsdl:operation name="ObtenerCliente">
@@ -43,10 +62,20 @@
     <wsdl:operation name="BuscarCliente">
       <wsdl:input wsaw:Action="http://tempuri.org/IClientService/BuscarCliente" message="tns:IClientService_BuscarCliente_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClientService/BuscarClienteResponse" message="tns:IClientService_BuscarCliente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IClientService/BuscarClienteDuplicadoExceptionFault" name="DuplicadoExceptionFault" message="tns:IClientService_BuscarCliente_DuplicadoExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="CrearCliente">
       <wsdl:input wsaw:Action="http://tempuri.org/IClientService/CrearCliente" message="tns:IClientService_CrearCliente_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClientService/CrearClienteResponse" message="tns:IClientService_CrearCliente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IClientService/CrearClienteDuplicadoExceptionFault" name="DuplicadoExceptionFault" message="tns:IClientService_CrearCliente_DuplicadoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/ModificarCliente" message="tns:IClientService_ModificarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/ModificarClienteResponse" message="tns:IClientService_ModificarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/EliminarCliente" message="tns:IClientService_EliminarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/EliminarClienteResponse" message="tns:IClientService_EliminarCliente_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IClientService" type="tns:IClientService">
@@ -77,9 +106,33 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="DuplicadoExceptionFault">
+        <soap:fault use="literal" name="DuplicadoExceptionFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="CrearCliente">
       <soap:operation soapAction="http://tempuri.org/IClientService/CrearCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DuplicadoExceptionFault">
+        <soap:fault use="literal" name="DuplicadoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCliente">
+      <soap:operation soapAction="http://tempuri.org/IClientService/ModificarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCliente">
+      <soap:operation soapAction="http://tempuri.org/IClientService/EliminarCliente" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

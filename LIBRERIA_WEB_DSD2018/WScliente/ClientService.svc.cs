@@ -27,9 +27,9 @@ namespace WScliente
             {
                  new FaultException<DuplicadoException>(
                     new DuplicadoException() {
-                        codigoError = "344eXD3",
+                        codigoError = "101",
                         descripcionError = "El cliente, ya exite "
-                    }, new FaultReason("Error al intentar Registrar un cliente Duplicado")
+                    }, new FaultReason("Error al intentar Registrar un cliente ")
                     );
             }
             clienteDAO.CrearCliente(c);
@@ -44,5 +44,18 @@ namespace WScliente
         {
             return clienteDAO.ObtenerCliente(idCliente);
         }
+
+        public void ModificarCliente(cliente c)
+        {
+            clienteDAO.ModificarCliente(c);     
+        }
+
+        public void EliminarCliente(int idcliente) {
+            clienteDAO.EliminarCliente(idcliente);   
+        }
+
+
+
+
     }
 }

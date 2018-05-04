@@ -53,5 +53,10 @@ namespace WCFServiceUsuario
         {
             return usuarioDAO.obtener(codigo);
         }
+
+        public int VerificarUsuario(string usuario, string clave)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
