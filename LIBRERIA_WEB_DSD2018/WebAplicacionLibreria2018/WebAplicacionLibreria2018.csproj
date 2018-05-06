@@ -212,6 +212,13 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\WSPedidos\Pedidos.disco" />
+    <None Include="Service References\WSPedidos\configuration91.svcinfo" />
+    <None Include="Service References\WSPedidos\configuration.svcinfo" />
+    <None Include="Service References\WSPedidos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="style.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
@@ -282,6 +289,19 @@
     <None Include="Service References\ServiceReferenceWScliente\ClientService3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\WSPedidos\Pedidos.wsdl" />
+    <None Include="Service References\WSPedidos\Pedidos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSPedidos\Pedidos1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSPedidos\Pedidos2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\WSPedidos\WebAplicacionLibreria2018.WSPedidos.Pedido.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -328,6 +348,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\ServiceReferenceWScliente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSPedidos\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -381,6 +406,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference2\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceWScliente\" />
+    <WCFMetadataStorage Include="Service References\WSPedidos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
