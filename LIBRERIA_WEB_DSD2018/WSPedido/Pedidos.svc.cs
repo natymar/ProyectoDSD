@@ -24,5 +24,10 @@ namespace WSPedido
         {
             return pedidoDAO.Obtener(dni);
         }
+
+        public List<Pedido> ListarPedidos()
+        {
+            return pedidoDAO.Listar();
+        }
     }
 }

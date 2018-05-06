@@ -64,8 +64,32 @@ namespace WSPedido.Persistencia
         public List<Pedido> Listar()
         {
             List<Pedido> pedidosEncontrados = new List<Pedido>();
-            //Ped
-            return null;
+            Pedido pedidoEncontrado = null;
+            string sql = "SELECT *from Cotizacion";
+            using (SqlConnection conexion = new SqlConnection(CadenaConexion))
+            {
+                conexion.Open();
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                {
+                    using (SqlDataReader resultado = comando.ExecuteReader())
+                    {
+                        while (resultado.Read())
+                        {
+                            pedidoEncontrado = new Pedido()
+                            {
+                                IdPedido = (int)resultado["idCotizacion"],
+                                NombreCli = (string)resultado["nombreCliente"],
+                                FechaPed = (DateTime)resultado["fechaCreacion"],
+                                Estado = (string)resultado["estado"],
+                                RutaFile = (string)resultado["rutafile"]
+                            };
+                            pedidosEncontrados.Add(pedidoEncontrado);
+                        }
+                    }
+                }
+                return pedidosEncontrados;
+            }
+
         }
     }
 }

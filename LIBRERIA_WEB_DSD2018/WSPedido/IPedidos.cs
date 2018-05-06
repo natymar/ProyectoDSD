@@ -17,5 +17,8 @@ namespace WSPedido
 
         [OperationContract]
         Pedido ObtenerPedido(int dni);
+
+        [OperationContract]
+        List<Pedido> ListarPedidos();
     }
 }
