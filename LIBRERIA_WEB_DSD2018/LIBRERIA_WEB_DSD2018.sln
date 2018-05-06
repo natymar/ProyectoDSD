@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAplicacionLibreria2018", "WebAplicacionLibreria2018\WebAplicacionLibreria2018.csproj", "{AD7492FA-A916-4C74-8514-5B0FDE1B8201}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceUsuario", "WCFServiceUsuario\WCFServiceUsuario.csproj", "{15E6D872-4C68-4291-B36D-FC46AE977BA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSPedido", "WSPedido\WSPedido.csproj", "{AE94F787-DD78-47C8-AF6B-8506A81EFD7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFRESTPRDUCTOS", "WCFRESTPRDUCTOS\WCFRESTPRDUCTOS.csproj", "{E7280EBE-F6A2-4815-97DF-D36BB9C77D7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,14 @@ Global
 		{AE94F787-DD78-47C8-AF6B-8506A81EFD7F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE94F787-DD78-47C8-AF6B-8506A81EFD7F}.Release|x86.ActiveCfg = Release|Any CPU
 		{AE94F787-DD78-47C8-AF6B-8506A81EFD7F}.Release|x86.Build.0 = Release|Any CPU
+		{E7280EBE-F6A2-4815-97DF-D36BB9C77D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7280EBE-F6A2-4815-97DF-D36BB9C77D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7280EBE-F6A2-4815-97DF-D36BB9C77D7E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E7280EBE-F6A2-4815-97DF-D36BB9C77D7E}.Debug|x86.Build.0 = Debug|Any CPU
+		{E7280EBE-F6A2-4815-97DF-D36BB9C77D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7280EBE-F6A2-4815-97DF-D36BB9C77D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7280EBE-F6A2-4815-97DF-D36BB9C77D7E}.Release|x86.ActiveCfg = Release|Any CPU
+		{E7280EBE-F6A2-4815-97DF-D36BB9C77D7E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
