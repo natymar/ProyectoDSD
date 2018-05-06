@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using WSPedido.Dominio;
+using WSPedido.Persistencia;
 
 namespace WSPedido
 {
@@ -11,8 +13,16 @@ namespace WSPedido
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Pedidos.svc o Pedidos.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Pedidos : IPedidos
     {
-        public void DoWork()
+        private PedidoDAO pedidoDAO = new PedidoDAO();
+
+        public Pedido CrearPedido(Pedido pedidoACrear)
         {
+            return pedidoDAO.Crear(pedidoACrear);
+        }
+
+        public Pedido ObtenerPedido(int dni)
+        {
+            return pedidoDAO.Obtener(dni);
         }
     }
 }

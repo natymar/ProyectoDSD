@@ -25,7 +25,10 @@ namespace WSPedido.Dominio
         public string Estado { get; set; }
 
         [DataMember]
-        public byte[] Archivo { get; set; }
+        public string RutaFile { get; set; }
+
+        //[DataMember]
+        //public byte[] Archivo { get; set; }
 
         [DataMember]
         public DateTime FechaPed { get; set; }

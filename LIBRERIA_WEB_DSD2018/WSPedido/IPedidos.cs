@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using WSPedido.Dominio;
 
 namespace WSPedido
 {
@@ -12,6 +13,9 @@ namespace WSPedido
     public interface IPedidos
     {
         [OperationContract]
-        void DoWork();
+        Pedido CrearPedido(Pedido pedidoACrear);
+
+        [OperationContract]
+        Pedido ObtenerPedido(int dni);
     }
 }
