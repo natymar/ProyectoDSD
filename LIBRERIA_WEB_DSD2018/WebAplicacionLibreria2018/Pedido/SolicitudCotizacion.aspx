@@ -35,7 +35,7 @@
         <br />
         <br />
         <br />
-        <asp:Button ID="btn_enviar" runat="server" Text="ENVIAR"/>
+        <asp:Button ID="btn_enviar" runat="server" Text="ENVIAR" OnClick="btn_enviar_Click"/>
     </form>
 </body>
 </html>
